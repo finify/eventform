@@ -34,10 +34,10 @@ class Login extends \Controller
         
             
             if($validation->passed()){
-                $user = $this->UsersModel->findByUsername($username);
+                $user = $this->usersModel->findByUsername($username);
                 if($user && password_verify(\Input::get('password'),$user->Password)){
                     $remember = (isset($_POST['username']) && \Input::get('remember'))? true : false;
-                    $this->UsersModel->login($remember,$user->id);
+                    $this->usersModel->login($remember,$user->id);
                     Router::redirect('home/index');
                 }else{
                     $validation->addError("Username or password does not match");
