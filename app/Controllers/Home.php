@@ -160,19 +160,8 @@ class Home extends \Controller{
 
 
     public function deletepurchaseAction($params){
-        $data = [];
-        $params = intval($params);
-        $deleted = $this->PurchaseModel->deletePurchase($params);
-        if($deleted){
-           $data = [
-               'deletedstatus'=> true
-           ];
-       }else{
-           $data = [
-               'deletedstatus'=> false
-           ];
-       }
-       $this->indexAction($data);
+      
+    //    $this->indexAction($data);
    }
 
 
