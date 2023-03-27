@@ -15,7 +15,7 @@ class Controller extends Application {
         
         $model1 = "App\Models\\". $model;
         if(class_exists($model1)){
-            $this->{$model.'Model'} = new $model1($model);
+            $this->{$model.'Model'} = new $model1(strtolower($model));
         }
     }
 }
