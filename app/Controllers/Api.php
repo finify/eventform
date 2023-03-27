@@ -83,11 +83,11 @@ class Api extends \Controller
                     $message = '<html><body>';
                     $message .= '<div style="background-color: white; text-align: left;color: black; font-family: Arial, Helvetica, sans-serif; padding-top:20px; padding-bottom:30px;">';
                     $message .= "<img src='".PROOT."assets/img/bcode.png' alt='bcode' style='width:200px; display:block; margin:auto;' >";
-                    $message .= "<h2 style='font-style:bold;'> Transaction Confirmation </h2>";
+                    $message .= "<h2 style='font-style:bold;'> Invite Confirmation </h2>";
                     $message .= "<h2> Good day, ". $full_name ."</h2>";
                     $message .= "<h3>Thank you for taking out time to submit an invitation for the Event</h3>";
                     $message .= "<h3>Please Click here to confirm your invitation</h3>";
-                    $message .= "<a href='".$verify_link."' style='padding:20px; background:green; color:white; font-size:30px;'>CONFIRM INVITE</a>";
+                    $message .= "<a href='".$verify_link."' style='padding:20px; background:green; color:white; font-size:20px; margin-top:10px;'>CONFIRM INVITE</a>";
                     $message .= '</div>';
                     $message .= "</body></html>";
 
@@ -163,12 +163,12 @@ class Api extends \Controller
 
                     $to      = $email_address; 
 
-                    $subject = 'Invitation Confirmation'; 
+                    $subject = 'Hi dear'; 
 
                     $message = '<html><body>';
                     $message .= '<div style="background-color: white; text-align: left;color: black; font-family: Arial, Helvetica, sans-serif; padding-top:20px; padding-bottom:30px;">';
                     $message .= "<img src='".PROOT."assets/img/bcode.png' alt='bcode' style='width:200px; display:block; margin:auto;' >";
-                    $message .= "<h2 style='font-style:bold;'> Transaction Confirmation </h2>";
+                    $message .= "<h2 style='font-style:bold;'> Thank you for filling this form </h2>";
                     $message .= "<h2> Good day, ". $full_name ."</h2>";
                     $message .= "<h3>Thank you for taking out time to submit an invitation for the Event</h3>";
                     $message .= '</div>';
