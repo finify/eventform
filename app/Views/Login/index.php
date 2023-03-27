@@ -13,7 +13,7 @@
 			</a>
 			</div>
 			<!-- /Logo -->
-			<h4 class="mb-2">Welcome to bcode's HowMuch Portal  👋</h4>
+			<h4 class="mb-2">Welcome to bcode's event form Portal  👋</h4>
 			<p class="mb-4">Please sign-in to your admin account</p>
 			<?php 
 			if(($_POST)){ ?>

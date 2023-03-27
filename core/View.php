@@ -1,8 +1,7 @@
 <?php
-
+#[AllowDynamicProperties]
 class View{
     protected $_head, $_body , $_siteTitle = SITE_TITLE , $_outputBuffer, $_layout = DEFAULT_LAYOUT;
-    public $displayErrors , $clientscount , $ProductsCount , $Products ;
     public function __construct(){
 
     }

@@ -6,7 +6,6 @@ use Router;
 
 class Login extends \Controller
 {
-    protected $displayErrors;
     public function __construct($controller, $action){
         parent::__construct($controller, $action);
         $this->load_model('Users');
@@ -36,7 +35,7 @@ class Login extends \Controller
             
             if($validation->passed()){
                 $user = $this->UsersModel->findByUsername($username);
-                if($user && password_verify(\Input::get('password'),$user->password)){
+                if($user && password_verify(\Input::get('password'),$user->Password)){
                     $remember = (isset($_POST['username']) && \Input::get('remember'))? true : false;
                     $this->UsersModel->login($remember,$user->id);
                     Router::redirect('home/index');

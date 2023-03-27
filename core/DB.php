@@ -48,7 +48,7 @@ class DB
         return $this;
     }
 
-    protected function _read($table, $params =[])
+    protected function _read($table, $params =[],$gate = ' AND')
     {
         $conditionString = '';
         $bind = [];
@@ -59,10 +59,10 @@ class DB
         if(isset($params['conditions'])){
             if(is_array($params['conditions'])){
                 foreach($params['conditions'] as $condition){
-                    $conditionString .= ' ' . $condition . ' AND';
+                    $conditionString .= ' ' . $condition . $gate;
                 }
                 $conditionString = trim($conditionString);
-                $conditionString = rtrim($conditionString, ' AND');
+                $conditionString = rtrim($conditionString, $gate);
             }else{
                 $conditionString = $params['conditions'];
             }
@@ -107,6 +107,14 @@ class DB
     public function findFirst($table, $params =[])
     {
         if($this->_read($table, $params)){
+            return $this->first();      
+        }
+        return false;
+    }
+
+    public function findFirstCol($table, $params =[], $gate)
+    {
+        if($this->_read($table, $params, $gate)){
             return $this->first();      
         }
         return false;

@@ -1,9 +1,8 @@
 <?php
-
+#[AllowDynamicProperties]
 class Controller extends Application {
     protected $_controller, $_action;
     public $view;
-    protected $UsersModel,$ClientsModel,$PropertyModel,$PurchaseModel, $ProductsModel;
 
     public function __construct($controller, $action){
         parent::__construct();

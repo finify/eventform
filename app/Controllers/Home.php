@@ -8,19 +8,19 @@ class Home extends \Controller{
     public $row_updated = 0,$row_uploaded = 0, $data;
     public function __construct($controller, $action){
         parent::__construct($controller, $action);
-        $this->load_model('Clients');
-        $this->load_model('Property');
-        $this->load_model('Purchase');
-        $this->load_model('Products');
+        $this->load_model('Customers');
+        $this->load_model('Schedule');
     }
 
     public function getdetails(){
-        $ProductsCount = $this->ProductsModel->getProductsCount();
-        $this->view->ProductsCount = $ProductsCount;
+        $CustomersCount = $this->CustomersModel->getCustomersCount();
+        $this->view->CustomersCount = $CustomersCount;
+
+        $this->view->Customers = $this->CustomersModel->getCustomers(); 
 
 
-        $Products = $this->ProductsModel->getProducts();
-        $this->view->Products = $Products;
+        $EventsCount = $this->ScheduleModel->getSchedulesCount();
+        $this->view->EventsCount = $EventsCount;
     }
 
     public function indexAction($data = null){
