@@ -16,7 +16,7 @@ class Schedule extends \Model
     // }
 
     public function findByCol($colvalues){
-        return $this->_db->findFirstCol($this->table_name,$colvalues,' OR');
+        return $this->_db->findFirstCol($this->table_name,$colvalues,' AND');
     }
 
     public function insertRows($fields) {
