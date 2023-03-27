@@ -97,7 +97,7 @@ class Api extends \Controller
                         'status'=> 'inserted'
                     ];
 
-                    // mailto($to,$subject,$message);
+                    mailto($to,$subject,$message);
                 }
             }
 
@@ -161,7 +161,6 @@ class Api extends \Controller
                     $message .= "<h2 style='font-style:bold;'> Transaction Confirmation </h2>";
                     $message .= "<h2> Good day, ". $full_name ."</h2>";
                     $message .= "<h3>Thank you for taking out time to submit an invitation for the Event</h3>";
-                    $message .= "<h3>Please Click here to confirm your invitation</h3>";
                     $message .= '</div>';
                     $message .= "</body></html>";
 
@@ -171,7 +170,7 @@ class Api extends \Controller
                         'status'=> 'inserted'
                     ];
 
-                    // mailto($to,$subject,$message);
+                    mailto($to,$subject,$message);
                 }
             }
 
