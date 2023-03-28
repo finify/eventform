@@ -94,12 +94,12 @@ if(!Session::exists(CURRENT_USER_SESSION_NAME)){
                 <div data-i18n="Analytics">Events</div>
               </a>
             </li>
-            <!-- <li class="menu-item">
-              <a href="<?= PROOT?>verify/" class="menu-link">
+            <li class="menu-item">
+              <a href="<?= PROOT?>customers/" class="menu-link">
                 <i class="menu-icon tf-icons bx bxs-user-check"></i>
-                <div data-i18n="Analytics">Verify Attendee</div>
+                <div data-i18n="Analytics">Customers</div>
               </a>
-            </li> -->
+            </li>
             <li class="menu-item">
               <a href="<?= PROOT?>login/logout" onclick="return confirm('Are you sure you want to logout?');"class="menu-link">
                 <i class="menu-icon tf-icons bx bx-log-out"></i>

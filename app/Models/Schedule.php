@@ -19,6 +19,10 @@ class Schedule extends \Model
         return $this->_db->findFirstCol($this->table_name,$colvalues,' AND');
     }
 
+    public function findByColOr($colvalues){
+        return $this->_db->findFirstCol($this->table_name,$colvalues,' OR');
+    }
+
     public function insertRows($fields) {
         return $this->_db->insert($this->table_name, $fields);
     }

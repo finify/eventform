@@ -42,6 +42,13 @@ class Customers extends \Model
         }
     }
 
+    public function getCustomersByDay(){
+        $sql = "SELECT * FROM {$this->table_name} WHERE Day=0 order by id desc";
+        if($this->_db->query($sql)){
+            return $this->_db->results();
+        }
+    }
+
     public function getCustomersCount(){
         $sql = "SELECT * FROM {$this->table_name} order by id desc";
         if($this->_db->query($sql)){

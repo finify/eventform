@@ -4,7 +4,7 @@ namespace App\Controllers;
 
 use Session;
 
-class Home extends \Controller{
+class Customers extends \Controller{
     public $row_updated = 0,$row_uploaded = 0, $data;
     public function __construct($controller, $action){
         parent::__construct($controller, $action);
@@ -16,7 +16,7 @@ class Home extends \Controller{
         $CustomersCount = $this->CustomersModel->getCustomersCount();
         $this->view->CustomersCount = $CustomersCount;
 
-        $this->view->Customers = $this->CustomersModel->getCustomers(); 
+        $this->view->Customers = $this->CustomersModel->getCustomersByDay(); 
 
 
         $EventsCount = $this->ScheduleModel->getSchedulesCount();
@@ -28,12 +28,11 @@ class Home extends \Controller{
         $this->getdetails();
 
 
-        $this->view->render('home/index',$data);
+        $this->view->render('home/customers',$data);
         
     }
 
-
-
+   
     public function deleteAction($params){
         $data = [];
         $params = intval($params);

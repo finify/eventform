@@ -93,7 +93,7 @@
 <?php $this->start('body');?>
 	<!-- Form -->
 	<section class="multi_step_form" style="background-image: url('<?=PROOT?>assets/img/background.jpg'); object-fit: cover;">
-      <form id="msform" style="background: rgba(162, 154, 154, 0.49); object-fit: cover;
+      <form id="msform" style="background: rgb(101 97 97 / 49%); object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; opacity: 0.99;
@@ -207,7 +207,7 @@ backdrop-filter: blur(7.4px);
                     <line class="path line" fill="none" stroke="#D06079" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" x1="95.8" y1="38" x2="34.4" y2="92.2"/>
                 </svg>
                 <h2 class="failed">Couldnot Upload details</h2>
-                <h4 class="failed">This might be an issue from our end, or the email address you provided is not active</h4>
+                <h4 class="failed">This might be an issue from our end, or the email address you provided is not active or has already been used for this event.</h4>
                 <button type="button" class="action-button previous previous_button failed">
                     Back
                 </button>
