@@ -82,12 +82,13 @@ class Api extends \Controller
 
                     $message = '<html><body>';
                     $message .= '<div style="background-color: white; text-align: left;color: black; font-family: Arial, Helvetica, sans-serif; padding-top:20px; padding-bottom:30px;">';
+                    $message .= "<img src='".PROOT."assets/img/bcode.png' alt='bcode' style='width:200px; display:block; margin:auto;' >";
                     $message .= "<h2 style='font-style:bold;'> Invite Confirmation </h2>";
                     $message .= "<h2> Good day, ". $full_name ."</h2>";
                     $message .= "<h3>Thank you for taking out time to submit an invitation for the Event</h3>";
                     $message .= "<h3>To complete your registration and save a spot that day ,please click the link below to confirm your invitation</h3>";
                     $message .= "<a href='".$verify_link."' style='padding:20px; background:green; color:white; font-size:15px; margin-top:15px;'>CONFIRM INVITE</a>";
-                    $message .= "<img src='".PROOT."assets/img/bcode.png' alt='bcode' style='width:200px; display:block; margin:auto;' >";
+                    
                     $message .= '</div>';
                     $message .= "</body></html>";
 
@@ -167,9 +168,9 @@ class Api extends \Controller
 
                     $message = '<html><body>';
                     $message .= '<div style="background-color: white; text-align: left;color: black; font-family: Arial, Helvetica, sans-serif; padding-top:20px; padding-bottom:30px;">';
+                    $message .= "<img src='".PROOT."assets/img/bcode.png' alt='bcode' style='width:200px; display:block; margin:auto;' >";
                     $message .= "<h2> Good day, ". $full_name ."</h2>";
                     $message .= "<h3>Thank you for taking out time to submit your personal information to us, we sure will keep you in the loop on exciting offers as they come</h3>";
-                    $message .= "<img src='".PROOT."assets/img/bcode.png' alt='bcode' style='width:200px; display:block; margin:auto;' >";
                     $message .= '</div>';
                     $message .= "</body></html>";
 
