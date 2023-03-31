@@ -118,8 +118,8 @@ backdrop-filter: blur(7.4px);
                     <circle class="path circle" fill="none" stroke="#73AF55" stroke-width="6" stroke-miterlimit="10" cx="65.1" cy="65.1" r="62.1"/>
                     <polyline class="path check" fill="none" stroke="#73AF55" stroke-width="6" stroke-linecap="round" stroke-miterlimit="10" points="100.2,40.2 51.5,88.8 29.8,67.5 "/>
                 </svg>
-                <h2 class="success">Your invite registeration as be confirmed successfully</h2>
-                <h4 class="success">We cant wait to have you</h4>
+                <h2 class="success">Your registration invitation has been confirmed successfully.</h2>
+                <h4 class="success">We can\'t wait to have you</h4>
             ';
                 }elseif($data['status'] == 'notfound'){
                     echo '
